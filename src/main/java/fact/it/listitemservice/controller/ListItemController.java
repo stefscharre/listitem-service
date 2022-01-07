@@ -28,7 +28,7 @@ public class ListItemController {
         return listItemRepository.findListItemsByUserIdAndListNaam(userId, naam);
     }
     @GetMapping("/listitems/{code}")
-    public ListItem getListitemById(@PathVariable String code){
+    public ListItem getListitemByListItemCode(@PathVariable String code){
         return listItemRepository.findListItemByListItemCode(code);
     }
     @PostMapping("/listitems")
