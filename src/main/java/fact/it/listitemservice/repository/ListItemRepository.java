@@ -11,7 +11,6 @@ public interface ListItemRepository extends MongoRepository <ListItem, String> {
     List<ListItem> findListItemsByUserId(Integer userid);
     List<ListItem> findListItemsByListNaam(String listnaam);
     List<ListItem> findListItemsByUserIdAndListNaam(Integer userid, String listnaam);
-
     ListItem findListItemByListItemCode(String code);
 
 }

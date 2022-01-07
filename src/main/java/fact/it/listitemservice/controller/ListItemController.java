@@ -24,7 +24,7 @@ public class ListItemController {
     }
 
     @GetMapping("/listitems/user/{userId}/list/naam/{naam}")
-    public List<ListItem> getListitemByUserIdAndNaam(@PathVariable Integer userId, @PathVariable String naam){
+    public List<ListItem> getListitemsByUserIdAndNaam(@PathVariable Integer userId, @PathVariable String naam){
         return listItemRepository.findListItemsByUserIdAndListNaam(userId, naam);
     }
     @GetMapping("/listitems/{code}")
@@ -59,10 +59,10 @@ public class ListItemController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PostConstruct
-    public void fillDB(){
-        if(listItemRepository.count()==0){
-            listItemRepository.save(new ListItem("a1",1,"taak", "engels","doe dit", true));
-        }
-    }
+    //@PostConstruct
+    //public void fillDB(){
+      //  if(listItemRepository.count()==0){
+        //    listItemRepository.save(new ListItem("a1",1,"taak", "engels","doe dit", true));
+    //}
+    //}
 }

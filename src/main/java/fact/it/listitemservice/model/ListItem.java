@@ -3,10 +3,12 @@ package fact.it.listitemservice.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.annotation.processing.Generated;
+
 @Document(collection ="listitems")
 public class ListItem {
     @Id
-    private int id;
+    private String id;
     private String listItemCode;
     private Integer userId;
     private String titel;
@@ -24,11 +26,11 @@ public class ListItem {
         this.status = status;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
